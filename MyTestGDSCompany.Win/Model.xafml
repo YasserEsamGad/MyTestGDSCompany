@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application Logo="ExpressAppLogo" Copyright="Yasser" Company="GDS">
+  <NavigationItems NavigationStyle="Accordion" DefaultChildItemsDisplayStyle="List" />
+  <Options UIType="TabbedMDI" FormStyle="Ribbon">
+    <Dashboards EnableCreation="True" />
+  </Options>
+  <SchemaModules>
+    <SchemaModule Name="SystemModule" Version="23.2.4.0" IsNewNode="True" />
+    <SchemaModule Name="SystemWindowsFormsModule" Version="23.2.4.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <DetailView Id="Empolyee_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Empolyee">
+              <LayoutGroup Id="Empolyee_col1">
+                <LayoutItem Id="FirstName" ViewItem="FirstName" />
+                <LayoutItem Id="LastName" ViewItem="LastName" />
+                <LayoutItem Id="DateOfBirth" ViewItem="DateOfBirth" />
+                <LayoutItem Id="Email" ViewItem="Email" />
+              </LayoutGroup>
+              <LayoutGroup Id="Empolyee_col2">
+                <LayoutItem Id="Position" ViewItem="Position" />
+                <LayoutItem Id="Department" ViewItem="Department" />
+                <LayoutItem Id="Salary" ViewItem="Salary" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Empolyee_LookupListView">
+      <Columns>
+        <ColumnInfo Id="LastName" PropertyName="LastName" Index="1" IsNewNode="True" />
+        <ColumnInfo Id="DateOfBirth" PropertyName="DateOfBirth" Index="2" IsNewNode="True" />
+        <ColumnInfo Id="Email" PropertyName="Email" Index="3" IsNewNode="True" />
+        <ColumnInfo Id="Position" PropertyName="Position" Index="4" IsNewNode="True" />
+        <ColumnInfo Id="Department" PropertyName="Department" Index="5" IsNewNode="True" />
+        <ColumnInfo Id="Salary" PropertyName="Salary" Index="6" IsNewNode="True" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>
